@@ -95,103 +95,73 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="w-full max-w-3xl mx-auto py-16 px-4">
+      <section id="projects" className="w-full max-w-5xl mx-auto py-16 px-4">
         <h2 className="text-3xl font-bold mb-8 text-emerald-900 text-center">Projects</h2>
         {/* Project 1 */}
-        <div className="mb-12 flex flex-col md:flex-row items-center gap-8">
-          <div className="flex-shrink-0 w-full md:w-2/5">
-            <div className="overflow-hidden rounded-xl shadow-lg transition-transform duration-300 hover:scale-105">
-              <Image src="https://i.postimg.cc/4ydTHR03/Whats-App-Image-2025-07-13-at-4-32-16-AM.jpg" alt="Residential Building (Flat Slab + Isolated Footing)" width={500} height={320} className="object-cover w-full h-64" />
+        <div className="mb-16">
+          <div className="flex flex-col md:flex-row gap-8 items-center">
+            <div className="w-full md:w-3/5">
+              <div className="flex gap-4 overflow-x-auto pb-2">
+                {["/project11.jpeg","/project12.jpeg","/project13.jpeg","/project14.jpeg"].map((src, i) => (
+                  <div key={src} className="min-w-[220px] max-w-[280px] flex-shrink-0 rounded-xl overflow-hidden shadow-lg">
+                    <Image src={src} alt={`Project 1 image ${i+1}`} width={400} height={300} className="object-cover w-full h-48 md:h-56 hover:scale-105 transition-transform duration-300" />
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-          <div className="flex-1">
-            <h3 className="text-xl font-bold mb-2 text-emerald-900">Residential Building (Flat Slab + Isolated Footing)</h3>
-            <p className="text-gray-700 mb-2">Designed with focus on structural efficiency and proper load distribution.</p>
-            <div className="flex flex-wrap gap-2 mt-2">
-              <span className="bg-emerald-100 text-emerald-900 px-3 py-1 rounded-full text-xs font-medium">Flat Slab</span>
-              <span className="bg-emerald-100 text-emerald-900 px-3 py-1 rounded-full text-xs font-medium">Isolated Footing</span>
-              <span className="bg-emerald-100 text-emerald-900 px-3 py-1 rounded-full text-xs font-medium">Structural Efficiency</span>
+            <div className="w-full md:w-2/5 mt-6 md:mt-0 md:pl-16">
+              <h3 className="text-2xl font-bold mb-2 text-emerald-900 md:text-right">Residential Building (Flat Slab + Isolated Footing)</h3>
+              <p className="text-gray-700 mb-3 text-lg md:text-right">Designed with focus on structural efficiency and proper load distribution.</p>
+              <div className="flex flex-wrap gap-2 mt-2 md:justify-end">
+                <span className="bg-emerald-100 text-emerald-900 px-3 py-1 rounded-full text-xs font-medium">Flat Slab</span>
+                <span className="bg-emerald-100 text-emerald-900 px-3 py-1 rounded-full text-xs font-medium">Isolated Footing</span>
+                <span className="bg-emerald-100 text-emerald-900 px-3 py-1 rounded-full text-xs font-medium">Structural Efficiency</span>
+              </div>
             </div>
           </div>
         </div>
         {/* Project 2 */}
-        <div className="mb-12 flex flex-col md:flex-row items-center gap-8">
-          <div className="flex-shrink-0 w-full md:w-2/5 order-2 md:order-1">
-            <div className="overflow-hidden rounded-xl shadow-lg transition-transform duration-300 hover:scale-105">
-              <Image src="https://i.postimg.cc/wv9zHmcL/Whats-App-Image-2025-07-13-at-4-32-18-AM.jpg" alt="Residential Building (Hollow Block System)" width={500} height={320} className="object-cover w-full h-64" />
+        <div className="mb-16">
+          <div className="flex flex-col md:flex-row gap-8 items-center">
+            <div className="flex-1 w-full">
+              <div className="flex gap-4 overflow-x-auto pb-2">
+                {["/project21.jpeg","/project22.jpeg"].map((src, i) => (
+                  <div key={src} className="min-w-[320px] max-w-[400px] flex-shrink-0 rounded-xl overflow-hidden shadow-lg">
+                    <Image src={src} alt={`Project 2 image ${i+1}`} width={600} height={400} className="object-cover w-full h-64 md:h-80 hover:scale-105 transition-transform duration-300" />
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-          <div className="flex-1 order-1 md:order-2">
-            <h3 className="text-xl font-bold mb-2 text-emerald-900">Residential Building (Hollow Block System)</h3>
-            <p className="text-gray-700 mb-2">Designed and analyzed using hollow block system for seismic compliance.</p>
-            <div className="flex flex-wrap gap-2 mt-2">
-              <span className="bg-emerald-100 text-emerald-900 px-3 py-1 rounded-full text-xs font-medium">Hollow Block</span>
-              <span className="bg-emerald-100 text-emerald-900 px-3 py-1 rounded-full text-xs font-medium">Seismic Compliance</span>
-            </div>
-          </div>
-        </div>
-        {/* Project 3 - Show each image individually with description */}
-        <div className="mb-12 flex flex-col md:flex-row items-center gap-8">
-          <div className="flex-shrink-0 w-full md:w-2/5">
-            <div className="overflow-hidden rounded-xl shadow-lg transition-transform duration-300 hover:scale-105">
-              <Image src="https://i.postimg.cc/QtS3Md0P/Whats-App-Image-2025-07-13-at-4-32-19-AM.jpg" alt="9-Story Tower 1" width={500} height={320} className="object-cover w-full h-64" />
-            </div>
-          </div>
-          <div className="flex-1">
-            <h3 className="text-xl font-bold mb-2 text-emerald-900">9-Story Residential Tower (Flat Slab + Raft Foundation)</h3>
-            <p className="text-gray-700 mb-2">High-rise modeling using flat slab + raft foundation. (View 1)</p>
-            <div className="flex flex-wrap gap-2 mt-2">
-              <span className="bg-emerald-100 text-emerald-900 px-3 py-1 rounded-full text-xs font-medium">Flat Slab</span>
-              <span className="bg-emerald-100 text-emerald-900 px-3 py-1 rounded-full text-xs font-medium">Raft Foundation</span>
-              <span className="bg-emerald-100 text-emerald-900 px-3 py-1 rounded-full text-xs font-medium">High-rise</span>
+            <div className="flex-1 w-full mt-6 md:mt-0">
+              <h3 className="text-2xl font-bold mb-2 text-emerald-900">Residential Building (Hollow Block System)</h3>
+              <p className="text-gray-700 mb-3">Designed and analyzed using hollow block system for seismic compliance.</p>
+              <div className="flex flex-wrap gap-2 mt-2">
+                <span className="bg-emerald-100 text-emerald-900 px-3 py-1 rounded-full text-xs font-medium">Hollow Block</span>
+                <span className="bg-emerald-100 text-emerald-900 px-3 py-1 rounded-full text-xs font-medium">Seismic Compliance</span>
+              </div>
             </div>
           </div>
         </div>
-        <div className="mb-12 flex flex-col md:flex-row items-center gap-8">
-          <div className="flex-shrink-0 w-full md:w-2/5 order-2 md:order-1">
-            <div className="overflow-hidden rounded-xl shadow-lg transition-transform duration-300 hover:scale-105">
-              <Image src="https://i.postimg.cc/MpjqYxpM/Whats-App-Image-2025-07-13-at-4-32-20-AM.jpg" alt="9-Story Tower 2" width={500} height={320} className="object-cover w-full h-64" />
+        {/* Project 3 */}
+        <div className="mb-16">
+          <div className="flex flex-col md:flex-row gap-8 items-center">
+            <div className="flex-1 w-full">
+              <div className="flex gap-4 overflow-x-auto pb-2">
+                {["/project31.jpeg","/project32.jpeg"].map((src, i) => (
+                  <div key={src} className="min-w-[320px] max-w-[400px] flex-shrink-0 rounded-xl overflow-hidden shadow-lg">
+                    <Image src={src} alt={`Project 3 image ${i+1}`} width={600} height={400} className="object-cover w-full h-64 md:h-80 hover:scale-105 transition-transform duration-300" />
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-          <div className="flex-1 order-1 md:order-2">
-            <h3 className="text-xl font-bold mb-2 text-emerald-900">9-Story Residential Tower (Flat Slab + Raft Foundation)</h3>
-            <p className="text-gray-700 mb-2">High-rise modeling using flat slab + raft foundation. (View 2)</p>
-            <div className="flex flex-wrap gap-2 mt-2">
-              <span className="bg-emerald-100 text-emerald-900 px-3 py-1 rounded-full text-xs font-medium">Flat Slab</span>
-              <span className="bg-emerald-100 text-emerald-900 px-3 py-1 rounded-full text-xs font-medium">Raft Foundation</span>
-              <span className="bg-emerald-100 text-emerald-900 px-3 py-1 rounded-full text-xs font-medium">High-rise</span>
-            </div>
-          </div>
-        </div>
-        <div className="mb-12 flex flex-col md:flex-row items-center gap-8">
-          <div className="flex-shrink-0 w-full md:w-2/5">
-            <div className="overflow-hidden rounded-xl shadow-lg transition-transform duration-300 hover:scale-105">
-              <Image src="https://i.postimg.cc/TPMG7SKk/Whats-App-Image-2025-07-13-at-4-35-00-AM.jpg" alt="9-Story Tower 3" width={500} height={320} className="object-cover w-full h-64" />
-            </div>
-          </div>
-          <div className="flex-1">
-            <h3 className="text-xl font-bold mb-2 text-emerald-900">9-Story Residential Tower (Flat Slab + Raft Foundation)</h3>
-            <p className="text-gray-700 mb-2">High-rise modeling using flat slab + raft foundation. (View 3)</p>
-            <div className="flex flex-wrap gap-2 mt-2">
-              <span className="bg-emerald-100 text-emerald-900 px-3 py-1 rounded-full text-xs font-medium">Flat Slab</span>
-              <span className="bg-emerald-100 text-emerald-900 px-3 py-1 rounded-full text-xs font-medium">Raft Foundation</span>
-              <span className="bg-emerald-100 text-emerald-900 px-3 py-1 rounded-full text-xs font-medium">High-rise</span>
-            </div>
-          </div>
-        </div>
-        <div className="mb-12 flex flex-col md:flex-row items-center gap-8">
-          <div className="flex-shrink-0 w-full md:w-2/5 order-2 md:order-1">
-            <div className="overflow-hidden rounded-xl shadow-lg transition-transform duration-300 hover:scale-105">
-              <Image src="https://i.postimg.cc/rp1TvJWq/Whats-App-Image-2025-07-13-at-4-35-01-AM.jpg" alt="9-Story Tower 4" width={500} height={320} className="object-cover w-full h-64" />
-            </div>
-          </div>
-          <div className="flex-1 order-1 md:order-2">
-            <h3 className="text-xl font-bold mb-2 text-emerald-900">9-Story Residential Tower (Flat Slab + Raft Foundation)</h3>
-            <p className="text-gray-700 mb-2">High-rise modeling using flat slab + raft foundation. (View 4)</p>
-            <div className="flex flex-wrap gap-2 mt-2">
-              <span className="bg-emerald-100 text-emerald-900 px-3 py-1 rounded-full text-xs font-medium">Flat Slab</span>
-              <span className="bg-emerald-100 text-emerald-900 px-3 py-1 rounded-full text-xs font-medium">Raft Foundation</span>
-              <span className="bg-emerald-100 text-emerald-900 px-3 py-1 rounded-full text-xs font-medium">High-rise</span>
+            <div className="flex-1 w-full mt-6 md:mt-0">
+              <h3 className="text-2xl font-bold mb-2 text-emerald-900">9-Story Residential Tower (Flat Slab + Raft Foundation)</h3>
+              <p className="text-gray-700 mb-3">High-rise modeling using flat slab + raft foundation. (View 1)</p>
+              <div className="flex flex-wrap gap-2 mt-2">
+                <span className="bg-emerald-100 text-emerald-900 px-3 py-1 rounded-full text-xs font-medium">Flat Slab</span>
+                <span className="bg-emerald-100 text-emerald-900 px-3 py-1 rounded-full text-xs font-medium">Raft Foundation</span>
+                <span className="bg-emerald-100 text-emerald-900 px-3 py-1 rounded-full text-xs font-medium">High-rise</span>
+              </div>
             </div>
           </div>
         </div>
